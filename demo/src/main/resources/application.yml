@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huihe56?characterEncoding=utf-8&serverTimezone=UTC
+  jackson:
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: true
+    #default-property-inclusion: non_null
+
+jwt:
+  config:
+    ttl: 6000000 #token有效时间
+    key: test_key #token私钥
